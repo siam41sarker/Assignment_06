@@ -1,0 +1,11 @@
+body{
+    font-family: "Lato", sans-serif;
+}
+.interFont{
+    font-family: "Inter", sans-serif;
+}
+.active{
+    background-color: rgb(14,122,129,0.1);
+    border: 1.5px solid rgb(14, 122, 129);
+    border-radius: 120px;
+}

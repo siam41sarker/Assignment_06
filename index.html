@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Peddy - Pet Adoption Platform</title>
+    <!--Link-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- navigation part started -->
+        <nav class="w-10/12 mx-auto mt-14">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <img src="assets/logo.webp" alt="">
+                    <h1 class="ml-4 text-2xl font-black text-[rgb(19,19,19)]">Peddy</h1>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-base font-normal text-[rgb(19,19,19)]">Home</a></li>
+                        <li><a class="text-base font-normal text-[rgb(19,19,19)]">Shop</a></li>
+                        <li><a class="text-base font-normal text-[rgb(19,19,19)]">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div
+                        class="flex justify-center items-center rounded-full btn bg-white w-14 h-14 border border-solid border-[rgba(14,122,129,0.2)]">
+                        <a><i class="fa-light fa-user"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- navigation part ended  -->
+        <!-- hero section started -->
+        <div class="hero bg-base-20 mt-16">
+            <div class="hero-content text-center">
+                <div class="max-w-3xl">
+                    <h5 class="text-2xl font-bold text-[rgba(19,19,19,0.6)]">Bringing Families Together ❤️‍🔥</h5>
+                    <h1 class=" mt-8 text-7xl font-black text-[rgb(19,19,19)]">Your Path to Adoption Starts Here</h1>
+                    <p id="details_p" class="py-6 text-[rgb(19,19,19)]">
+                        Adopting a pet is a life-changing experience. Explore our collection of lovable pets. Be ready to find their forever home. Start today and bring joy, companionship and unconditional love into your life.
+                    </p>
+                    <button id="btn_view_more"
+                        class="btn btn-primary border border-solid border-[rgb(14,122,129)] bg-[rgb(14,122,129)] rounded-xl text-white text-xl font-bold">View
+                        More</button>
+                    <button id="btn_view_less" onclick="viewLess()"
+                        class="btn btn-primary hidden border border-solid border-[rgb(14,122,129)] bg-[rgb(14,122,129)] rounded-xl text-white text-xl font-bold">View
+                        Less
+                    </button>
+                    <img id="pet_image" class="mt-14" src="assets/pet.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- hero section ended -->
+    </header>
+    <main>
+        <div class="hero bg-base-20 mt-16">
+            <div class="hero-content text-center">
+                <div class="max-w-3xl">
+                    <h1 class=" mt-24 text-5xl  font-black text-[rgb(19,19,19)]">Adopt Your Best Friend</h1>
+                    <p class="py-6 mt-6 text-[rgb(19,19,19)]">
+                        Your new best friend is waiting for you, ready to offer unconditional love and companionship. Start your adoption journey today and experience the happiness that only a pet can provide.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--Nav Part-->
+        <nav id="nav_btn"
+            class="grid grid-cols-1 gap-5 md:grid md:grid-cols-3 md:items-center md:gap-5 md:w-10/12 md:mx-auto lg:w-10/12 lg:flex lg:justify-between mt-12 mx-auto w-10/12 ml-20 lg:mx-auto">
+        </nav>
+        <section class="w-10/12 mx-auto mt-10">
+            <div
+                class="flex flex-col gap-4 md:flex-row md:gap-0 md:justify-between lg:flex-row lg:gap-0 lg:justify-between">
+                <div class="">
+                    <h3 class="text-2xl font-black text-[rgb(19,19,19)]">Best Deal For You</h3>
+                </div>
+                <div onclick="sortByPrice()" class="">
+                    <a class="btn w-44 h-14 rounded-xl text-xl text-white font-bold bg-[rgb(14,122,129)]">Sort by
+                        Price</a>
+                </div>
+            </div>
+            <div class="w-full h-auto mt-8 mb-4 flex justify-center items-center">
+                <div id="spin" class="hidden">
+                    <span class="loading loading-bars loading-lg"></span>
+                </div>
+            </div>
+            <div id="main_portion" class="w-full h-auto mt-8 mb-4 flex gap-6">
+                <section id="main_card"
+                    class="w-3/4 h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-3 rounded-xl border border-solid border-[rgba(19,19,19,0.1)]">
+                </section>
+                <section class="h-auto w-1/4 md:p-3 lg:p-3 border border-solid border-[rgba(19,19,19,0.1)]  rounded-xl">
+                    <div id="sidebar" class=" w-auto grid grid-cols-1 gap-1 lg:grid-cols-2 md:grid-cols-2">
+                        
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer
+        class="w-full grid grid-cols-1 py-[100px] pl-[50px] gap-14 md:grid-cols-2 lg:h-[446px] bg-[rgb(19,19,19)] lg:flex lg:justify-between lg:py-[100px] lg:px-[140px]">
+        <div class="flex flex-col gap-3">
+            <div class="flex gap-3">
+                <div class="mt-3"><img src="assets/logo.webp" alt=""></div>
+                <h1 class="text-white text-[32px] font-black">Peddy</h1>
+            </div>
+            <h3 class="text-[rgba(255,255,255,0.9)] mt-3">Location: av. Washington 165, NY CA 54003</h3>
+            <h3 class="text-[rgba(255,255,255,0.9)]">Phone:+31 85 964 47 25</h3>
+            <h3 class="text-[rgba(255,255,255,0.9)]">Email:info@gmail.com</h3>
+            <h3 class="text-[rgba(255,255,255,0.9)]">Openings hours: 9.00 AM - 5.00 PM</h3>
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com" target="_blank"><img class="w-8 h-8" src="assets/fb.webp" alt=""></a>
+                <a href="https://www.twitter.com" target="_blank"><img class="w-8 h-8" src="assets/x.webp" alt=""></a>
+                <a href="https://www.youtube.com" target="_blank"><img class="w-8 h-8" src="assets/youtube.webp"
+                        alt=""></a>
+                <a href="https://www.instagram.com" target="_blank"><img class="w-8 h-8" src="assets/insta.webp"
+                        alt=""></a>
+            </div>
+        </div>
+        <div class="flex flex-col gap-3">
+            <h2 class="interFont text-[rgba(255,255,255,0.9)] text-[18px] font-bold mt-4">Useful Links</h2>
+            <a class="text-[rgba(255,255,255,0.6)] mt-5" href="x">Home</a>
+            <a class="text-[rgba(255,255,255,0.6)]" href="x">About Us</a>
+            <a class="text-[rgba(255,255,255,0.6)]" href="x">Animals</a>
+            <a class="text-[rgba(255,255,255,0.6)]" href="x">Foundation</a>
+            <a class="text-[rgba(255,255,255,0.6)]" href="x">Contact</a>
+        </div>
+        <div class="flex flex-col gap-8">
+            <h2 class="interFont text-[rgba(255,255,255,0.9)] text-[18px] font-bold mt-4">Drop a Message</h2>
+            <form>
+                <div class="flex flex-col gap-4">
+                    <input class="w-[240px] h-[49px] bg-[rgba(255,255,255,0.05)] rounded-xl pl-3 text-white"
+                        type="email" placeholder="Enter your email">
+                    <button
+                        class="btn w-[240px] rounded-xl bg-[rgb(14,122,129)] text-white text-xl font-bold border border-solid border-[rgb(14,122,129)] hover:bg-blue-600 hover:border-blue-600">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </footer>
+    <!--<button class="btn" onclick="my_modal_5.showModal()">open modal</button>-->
+    <dialog id="adopted_model" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box flex flex-col items-center w-[340px]">
+            <img class="w-[70px] h-[70px]" src="assets/congrats.webp" alt="">
+            <h1 class=" text-5xl font-black text-black">Congrats</h1>
+            <p class="text-[rgba(19,19,19,0.8)] mt-8">Adoption Process is started For your pet</p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <h1 id="countdown" class=" text-5xl font-black text-[rgb(19,19,19)] ml-5 mt-[-15px]"></h1>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!--Details Modal-->
+    <dialog id="modals" class="modal">
+        <div class="modal-box w-full h-auto rounded-none ">
+            <div id="modal_body">
+
+            </div>
+            <div class="modal-action grid grid-cols-1 p-0 ">
+                <form method="dialog">
+                    <button
+                        class="btn w-full rounded-lg bg-[rgba(14,122,129,0.1)] border border-solid border-[rgba(14,122,129,0.2)]">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
